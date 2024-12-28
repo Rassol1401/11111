@@ -1,11 +1,9 @@
 import smtplib
 from dotenv import load_dotenv
 import os 
-print()
 site_name="https://dvmn.org/profession-ref-program/id627628409/IVxXh/"
 friend_name="Елена"
 sander_name="Максим"
-print()
 letter="""/
 From: devmanorg@yandex.ru
 To: rassolenko.maxim@yandex.ru
@@ -28,7 +26,6 @@ Content-Type: text/plain; charset="UTF-8
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.""".replace("%friend_name%",friend_name).replace("%my_name%",sander_name).replace("%website%",site_name)
 letter = letter.encode("UTF-8")
-print(letter)
 load_dotenv()
 login= os.getenv('LOGIN')
 password= os.getenv('TOKEN')
